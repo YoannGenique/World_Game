@@ -15,21 +15,19 @@
   </head>
   <body>
     <div class="container d_flex">
-      <form method="POST" class="form-inline my-2">
+      <form class="form-inline my-2">
         <div>
-          <input name="in_search" class="larg" type="search">
-        <button class="btn btn_yo pulse" type="submit">
-          <img
-            src="assets/img/ico/loupe_ico.png"
-            alt="icone de loupe"
-            width="22px"
-          />
+          <input list="games" id="search" name="search" class="larg" autocomplete="off">
+          <datalist id="games">
+          </datalist>
+          <button class="btn btn_yo pulse" type="submit">
+            <img src="assets/img/ico/loupe_ico.png" alt="icone de loupe" width="22px"/>
+          </button>
         </div>
-        </button>
       </form>
     </div>
       <div class="card_yo container" id="result">
       </div>
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/index.js"></script>
   </body>
 </html>
