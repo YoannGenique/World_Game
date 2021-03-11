@@ -6,35 +6,29 @@ const datalist = document.getElementById("games");
 const xhr = new XMLHttpRequest();
 
 search.addEventListener("input", (e) => {
+  e.preventDefault();
 
-e.preventDefault();
+  const formData = new FormData();
 
-const formData = new FormData();
+  xhr.open("POST", "assets/php/indexLike.php");
 
-xhr.open("POST", "assets/php/indexLike.php");
+  xhr.send(formData);
 
-xhr.send(formData);
+  xhr.addEventListener("readystatechange", () => {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+      const values = JSON.parse(xhr.response);
 
-xhr.addEventListener("readystatechange", () => {
+      datalist.innerHTML = "";
+      console.log(values);
+      values.forEach(function (item) {
+        var option = document.createElement("option");
 
-  if (xhr.readyState === 4 && xhr.status === 200) {
+        option.value = item["game_name"];
 
-  const values = JSON.parse(xhr.response);
+        option.innerText = item["game_name"];
 
-  datalist.innerHTML = ""
-console.log(values)
-  values.forEach(function (item) {
-
-    var option = document.createElement('option');
-
-    option.value = item["game_name"];
-
-    option.innerText = item["game_name"];
-
-    datalist.appendChild(option);
-    
+        datalist.appendChild(option);
+      });
+    }
   });
-}
 });
-});
-

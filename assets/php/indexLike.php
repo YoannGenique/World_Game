@@ -5,7 +5,7 @@ require '../../inc/db.php';
 
   // $search = htmlspecialchars($_POST['in_search']);
 
-  $sql = 'SELECT * FROM games WHERE game_name LIKE "%"';
+  $sql = "SELECT * FROM games WHERE game_name LIKE '%'";
 
   $query=$db->prepare($sql);
 

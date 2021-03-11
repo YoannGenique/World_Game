@@ -28,6 +28,6 @@
     </div>
       <div class="card_yo container" id="result">
       </div>
-    <script src="assets/js/index.js"></script>
+    <script src="assets/js/main.js"></script>
   </body>
 </html>
