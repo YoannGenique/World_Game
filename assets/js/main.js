@@ -1,5 +1,7 @@
 // Recupération du Formulaire
 const form = document.querySelector("form");
+// Récupération du btn
+const btn = document.querySelector("button");
 // Récupération de la barre de Recherche
 const search = document.getElementById("search");
 // Récupération des champ ou s'affiche les options
@@ -8,8 +10,58 @@ const datalist = document.getElementById("games");
 const resultDiv = document.getElementById("result");
 
 
+//**************** Ecoute de L'input ********************//
 
-// Validation du submit
+search.addEventListener("input", (e) => {
+
+  e.preventDefault();
+
+  const formData = new FormData(form);
+
+  //On communique avec le script passé en 1er argument sous forme de caractère
+  fetch(
+    "assets/php/indexLike.php",
+    //2ème argument de fetch, le corps de notre requête, dans notre cas on précise la méthode "POST" et le body (les données) soit le formData
+    {
+      method: "POST",
+      body: formData,
+    }
+  )
+    //Nous recevons une Response du serveur, nous retournons une Promise résolue qui contiendra les données parsées en JSON, soit un objet JS
+    .then((response) => response.json())
+    //Nous recevons ENFIN nos données comme un objet JS
+    .then((datas) => {
+
+
+      datalist.innerHTML = "";
+
+      datas.forEach((data) => {
+
+        const option = document.createElement("option");
+
+        option.value = data["game_name"];
+
+        option.innerText = data["game_name"];
+
+        datalist.appendChild(option);
+
+      });
+
+
+      const options = document.querySelectorAll("option");
+
+      options.forEach(option => {
+
+        if (search.value == option.innerText) {
+          datalist.innerText = "";
+          btn.click();
+        }
+      })
+    });
+});
+
+//******** Validation du submit **********//
+
 form.addEventListener("submit", (e) => {
 
   e.preventDefault();
@@ -64,47 +116,5 @@ form.addEventListener("submit", (e) => {
 
       //je vide mon formulaire
       form.reset();
-    });
-});
-
-
-
-
-
-search.addEventListener("input", (e) => {
-
-  e.preventDefault();
-
-  const formData = new FormData(form);
-
-  //On communique avec le script passé en 1er argument sous forme de caractère
-  fetch(
-    "assets/php/indexLike.php",
-    //2ème argument de fetch, le corps de notre requête, dans notre cas on précise la méthode "POST" et le body (les données) soit le formData
-    {
-      method: "POST",
-      body: formData,
-    }
-  )
-    //Nous recevons une Response du serveur, nous retournons une Promise résolue qui contiendra les données parsées en JSON, soit un objet JS
-    .then((response) => response.json())
-    //Nous recevons ENFIN nos données comme un objet JS
-    .then((datas) => {
-      //on manipule nos données
-      console.log(datas);
-
-      datalist.innerHTML = "";
-
-      datas.forEach((data) => {
-
-        let option = document.createElement("option");
-
-        option.value = data["game_name"];
-
-        option.innerText = data["game_name"];
-
-        datalist.appendChild(option);
-
-      });
     });
 });
