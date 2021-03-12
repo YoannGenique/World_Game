@@ -1,7 +1,7 @@
 // Recupération du Formulaire
 const form = document.querySelector("form");
 // Récupération du btn
-const btn = document.querySelector("button");
+const btn = document.getElementById("btn");
 // Récupération de la barre de Recherche
 const search = document.getElementById("search");
 // Récupération des champ ou s'affiche les options

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
@@ -20,7 +20,7 @@
           <input list="games" id="search" name="search" class="larg" autocomplete="off">
           <datalist id="games">
           </datalist>
-          <button class="btn btn_yo pulse" type="submit">
+          <button id="btn" class="btn btn_yo pulse" type="submit">
             <img src="assets/img/ico/loupe_ico.png" alt="icone de loupe" width="22px"/>
           </button>
         </div>
