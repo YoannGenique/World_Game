@@ -1,7 +1,7 @@
 <?php
 include ('../../inc/db.php');
 
-$sql = "SELECT * FROM games ORDER BY game_id DESC";
+$sql = "SELECT * FROM games";
 
 $query=$db->prepare($sql);
 

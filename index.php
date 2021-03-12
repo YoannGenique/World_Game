@@ -15,7 +15,7 @@
   </head>
   <body>
     <div class="container d_flex">
-      <form class="form-inline my-2">
+      <form method="POST" class="form-inline my-2">
         <div>
           <input list="games" id="search" name="search" class="larg" autocomplete="off">
           <datalist id="games">

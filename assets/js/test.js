@@ -37,3 +37,59 @@ input.placeholder = "Loading options...";
 // Set up and make the request.
 request.open('GET', 'assets/php/indexLike.php', true);
 request.send();
+
+// Pour que mes recherche se fasse au fur et à mesure dans la barre de recherche 
+  // const xhr = new XMLHttpRequest();
+
+  // let i = 0;
+
+  // search.addEventListener("input", (e) => {
+
+  //   e.preventDefault();
+
+  //   if (search.value !== "") {
+
+
+  //     const formData = new FormData(form);
+
+  //     xhr.open("POST", "assets/php/indexLike.php");
+
+  //     xhr.send(formData);
+
+  //     xhr.addEventListener("readystatechange", () => {
+
+  //       if (xhr.readyState === 4 && xhr.status === 200) {
+
+  //         console.log(i);
+  //         i++;
+
+  //         const datas = JSON.parse(xhr.response);
+
+
+
+  //         datalist.innerHTML = "";
+
+  //         // console.log(datas);
+
+  //         datas.forEach((data) => {
+
+  //           let option = document.createElement("option");
+
+  //           option.value = data["game_name"];
+
+  //           option.innerText = data["game_name"];
+
+  //           datalist.appendChild(option);
+
+  //         });
+  //         /************************************* */
+  //         // if(search.value==datas.game_name){
+
+  //         // }
+
+  //         /************************************** */
+  //       }
+  //     }
+  //     )
+  //   };
+  // });
