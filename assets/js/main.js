@@ -70,7 +70,7 @@ form.addEventListener("submit", (e) => {
 
   //On communique avec le script passé en 1er argument sous forme de caractère
   fetch(
-    "assets/php/index.php",
+    "assets/php/indexLike.php",
     //2ème argument de fetch, le corps de notre requête, dans notre cas on précise la méthode "POST" et le body (les données) soit le formData
     {
       method: "POST",
