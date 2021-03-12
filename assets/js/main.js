@@ -113,7 +113,6 @@ form.addEventListener("submit", (e) => {
                                   </div>
                                 </div>`;
       });
-
       //je vide mon formulaire
       form.reset();
     });
