@@ -11,6 +11,7 @@ body {
   display: flex;
   justify-content: center;
 }
+/****** Card For Games *****/
 .card_yo {
   margin-top: 50px;
   margin-bottom: 50px;
@@ -49,6 +50,7 @@ body {
   opacity: 0.8;
   font-style: italic;
 }
+/***** btn ********/
 .larg {
   text-align: center;
   width: 250px;
