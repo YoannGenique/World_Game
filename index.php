@@ -14,7 +14,8 @@
     <title>World Games</title>
   </head>
   <body>
-    <div class="container d_flex">
+    <h1 class="neon">World Games</h1>
+    <div class="container d_flex">    
       <form method="POST" class="form-inline my-2">
         <div>
           <input list="games" id="search" name="search" class="larg" autocomplete="off">
