@@ -59,9 +59,8 @@ body {
 /***** btn ********/
 .larg {
   text-align: center;
-  width: 250px;
+  width: 227px;
   height: 39px;
-  border-radius: 10px;
   border: none;
 }
 .btn_yo {
@@ -143,4 +142,31 @@ body {
   .img_card{
     margin-bottom: 25px;
   }
+}
+
+.card_search{
+  width: 200px;
+  height: 60px;
+  margin: 5px;
+  display: flex;
+  background-color: white;
+}
+.img_wid{
+  width: 40px;
+  margin: 2px;
+}
+.title_card{
+  font-size: 1rem;
+  margin-left: 5px;
+  text-align: left;
+}
+.dev{
+  font-style: italic;
+  font-size: 0.6rem;
+  text-align: left;
+  margin-left: 5px;
+
+}
+.games{
+  margin-top: 2px;
 }

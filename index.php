@@ -18,12 +18,15 @@
     <div class="container d_flex">    
       <form method="POST" class="form-inline my-2">
         <div>
-          <input list="games" id="search" name="search" class="larg" autocomplete="off">
-          <datalist id="games">
-          </datalist>
-          <button id="btn" class="btn btn_yo pulse" type="submit">
+          <input name="search" type="text" class="larg" id="search" autocomplete="off">
+          <div class="games" id="games">
+          </div>
+          <!-- <input list="games" id="search" name="search" class="larg" autocomplete="off">
+          <datalist id="games"> 
+          </datalist>-->
+          <!-- <button id="btn" class="btn btn_yo pulse" type="submit">
             <img src="assets/img/ico/loupe_ico.png" alt="icone de loupe" width="22px"/>
-          </button>
+          </button> -->
         </div>
       </form>
     </div>

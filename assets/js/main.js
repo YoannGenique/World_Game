@@ -14,50 +14,81 @@ const resultDiv = document.getElementById("result");
 
 search.addEventListener("input", (e) => {
 
-  e.preventDefault();
+  if (search.value !== " " && search.value !== "") {
 
-  const formData = new FormData(form);
+    e.preventDefault();
 
-  //On communique avec le script passé en 1er argument sous forme de caractère
-  fetch(
-    "assets/php/indexLike.php",
-    //2ème argument de fetch, le corps de notre requête, dans notre cas on précise la méthode "POST" et le body (les données) soit le formData
-    {
-      method: "POST",
-      body: formData,
-    }
-  )
-    //Nous recevons une Response du serveur, nous retournons une Promise résolue qui contiendra les données parsées en JSON, soit un objet JS
-    .then((response) => response.json())
-    //Nous recevons ENFIN nos données comme un objet JS
-    .then((datas) => {
+    const formData = new FormData(form);
 
-
-      datalist.innerHTML = "";
-
-      datas.forEach((data) => {
-
-        const option = document.createElement("option");
-
-        option.value = data["game_name"];
-
-        option.innerText = data["game_name"];
-
-        datalist.appendChild(option);
-
-      });
+    //On communique avec le script passé en 1er argument sous forme de caractère
+    fetch(
+      "assets/php/indexLike.php",
+      //2ème argument de fetch, le corps de notre requête, dans notre cas on précise la méthode "POST" et le body (les données) soit le formData
+      {
+        method: "POST",
+        body: formData,
+      }
+    )
+      //Nous recevons une Response du serveur, nous retournons une Promise résolue qui contiendra les données parsées en JSON, soit un objet JS
+      .then((response) => response.json())
+      //Nous recevons ENFIN nos données comme un objet JS
+      .then((datas) => {
 
 
-      const options = document.querySelectorAll("option");
+        datalist.innerHTML = "";
 
-      options.forEach(option => {
+        datas.forEach((data) => {
 
-        if (search.value == option.innerText) {
-          datalist.innerText = "";
-          btn.click();
-        }
+          datalist.innerHTML += `<div>
+                                <button>
+                                  <div class="card_search larg">
+                                    <div>
+                                      <img class="img_wid" src="${data.game_img}">
+                                    </div>
+                                    <div>
+                                      <div>
+                                        <h2 id="sel" class="title_card">${data.game_name}</h2>
+                                      </div>
+                                      <div>
+                                        <p class="dev">${data.game_developper}</p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </button>
+                              </div>`
+
+          // const option = document.createElement("option");
+          // const option = document.createElement("a");
+
+          // const op = document.createElement("p");
+
+          // op.value = data["game_name"];
+
+          // op.innerText = data["game_name"];
+
+          // datalist.appendChild(option);
+
+          // const app = querySelectorAll("a");
+
+          // app.appendChild(op)
+
+        });
       })
-    });
+
+    const options = document.querySelectorAll("h2");
+
+    options.forEach(option => {
+
+      if (search.value == option.innerText) {
+        datalist.innerText = "";
+        btn.click();
+
+      }
+
+    })
+  } else {
+    datalist.innerText = "";
+  };
 });
 
 //******** Validation du submit **********//
