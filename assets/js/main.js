@@ -12,9 +12,10 @@ const resultDiv = document.getElementById("result");
 
 //**************** Ecoute de L'input ********************//
 
-search.addEventListener("input", (e) => {
+search.addEventListener("keyup", (e) => {
 
   if (search.value !== " " && search.value !== "") {
+    console.log(e);
 
     e.preventDefault();
 
@@ -39,7 +40,7 @@ search.addEventListener("input", (e) => {
 
         datas.forEach((data) => {
 
-          datalist.innerHTML += `<button class="d-block" id="${data.game_id}">
+          datalist.innerHTML += `<button class="d-block" id="${data.game_name}">
                                   <div class="card_search larg">
                                     <div>
                                       <img class="img_wid" src="${data.game_img}">
@@ -72,15 +73,21 @@ search.addEventListener("input", (e) => {
 
         });
 
-        const options = document.querySelectorAll("h2");
-        console.log(options);
-        options.forEach(option => {
+        const buttons = document.querySelectorAll("button.d-block");
+        console.log(buttons);
+        buttons.forEach(button => {
 
-          if (search.value == option.innerText) {
-            datalist.innerText = "";
-            btn.click();
-          }
+          button.addEventListener("click", (e) => {
 
+            e.preventDefault();
+
+            search.value = button.id;
+
+            datalist.innerHTML = "";
+
+            form.dispatchEvent(new Event("submit"));
+
+          })
         })
       })
   } else {
@@ -142,6 +149,7 @@ form.addEventListener("submit", (e) => {
                                 </div>`;
       });
       //je vide mon formulaire
+      datalist.innerHTML = "";
       form.reset();
     });
 });
