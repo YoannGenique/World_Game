@@ -39,8 +39,7 @@ search.addEventListener("input", (e) => {
 
         datas.forEach((data) => {
 
-          datalist.innerHTML += `<div>
-                                <button>
+          datalist.innerHTML += `<button class="d-block" id="${data.game_id}">
                                   <div class="card_search larg">
                                     <div>
                                       <img class="img_wid" src="${data.game_img}">
@@ -54,8 +53,7 @@ search.addEventListener("input", (e) => {
                                       </div>
                                     </div>
                                   </div>
-                                </button>
-                              </div>`
+                                </button>`
 
           // const option = document.createElement("option");
           // const option = document.createElement("a");
@@ -73,19 +71,18 @@ search.addEventListener("input", (e) => {
           // app.appendChild(op)
 
         });
+
+        const options = document.querySelectorAll("h2");
+        console.log(options);
+        options.forEach(option => {
+
+          if (search.value == option.innerText) {
+            datalist.innerText = "";
+            btn.click();
+          }
+
+        })
       })
-
-    const options = document.querySelectorAll("h2");
-
-    options.forEach(option => {
-
-      if (search.value == option.innerText) {
-        datalist.innerText = "";
-        btn.click();
-
-      }
-
-    })
   } else {
     datalist.innerText = "";
   };
