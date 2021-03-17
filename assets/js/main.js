@@ -95,7 +95,7 @@ search.addEventListener("keyup", (e) => {
   };
 });
 
-//******** Validation du submit **********//
+//******** Validation du submit *********//
 
 form.addEventListener("submit", (e) => {
 
