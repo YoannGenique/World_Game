@@ -40,7 +40,7 @@ search.addEventListener("keyup", (e) => {
 
         datas.forEach((data) => {
 
-          datalist.innerHTML += `<button class="d-block" id="${data.game_name}">
+          datalist.innerHTML += `<button class="d-block btn_abs" id="${data.game_name}">
                                   <div class="card_search larg">
                                     <div>
                                       <img class="img_wid" src="${data.game_img}">

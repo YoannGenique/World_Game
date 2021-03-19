@@ -17,9 +17,9 @@
     <h1 class="neon">World Games</h1>
     <div class="container d_flex">    
       <form method="POST" class="form-inline my-2">
-        <div>
-          <input name="search" type="text" class="larg" id="search" autocomplete="off">
-          <button id="btn" class="btn btn_yo pulse" type="submit">
+        <div class="in_dep">
+          <input name="search" type="text" class="larg trans desc" id="search" autocomplete="off">
+          <button id="btn" class="btn btn_yo pulse trans" type="submit">
             <img src="assets/img/ico/loupe_ico.png" alt="icone de loupe" width="22px"/>
           </button>
           <div class="games" id="games">

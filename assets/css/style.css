@@ -13,7 +13,6 @@ body {
   background-position: center;
 }
 .d_flex {
-  margin-top: 180px;
   display: flex;
   justify-content: center;
 }
@@ -21,8 +20,8 @@ body {
 .card_yo {
   margin-top: 50px;
   margin-bottom: 50px;
-  border: none;
-}
+  border: none; 
+} 
 .div_card{
   display: flex;
   color: white;
@@ -109,10 +108,11 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  margin-top: 150px;
+  margin-top: 60px;
   font-family: 'Neon';
-  font-size: 120px;
+  font-size: 150px;
   color: rgb(255, 255, 255);
+  opacity: 90%;
   -webkit-animation: glow 1s ease-in-out infinite alternate;
   -moz-animation: glow 1s ease-in-out infinite alternate;
   animation: glow 1s ease-in-out infinite alternate;
@@ -167,6 +167,16 @@ body {
   margin-left: 5px;
 
 }
+.trans{
+  opacity: 65%;
+}
+.desc{
+  margin-top: 30px;
+}
 .games{
-  margin-top: 0px;
+  position: absolute;
+  z-index: 1;
+}
+.in_dep{
+  position: relative;
 }
