@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : mer. 10 mars 2021 à 22:12
+-- Généré le : mer. 24 mars 2021 à 11:45
 -- Version du serveur :  10.4.14-MariaDB
 -- Version de PHP : 7.4.11
 
@@ -42,9 +42,9 @@ CREATE TABLE `games` (
 --
 
 INSERT INTO `games` (`game_id`, `game_name`, `release_date`, `game_developper`, `game_publisher`, `description`, `game_img`) VALUES
-(2, 'World of Warcraft', '2005-11-23', 'Blizzard Entertainment', 'Blizzard Entertainment', 'World of Warcraft (abrégé WoW) est un jeu vidéo de type MMORPG (jeu de rôle en ligne massivement multijoueur) développé par la société Blizzard Entertainment. C\'est le 4e jeu de l\'univers médiéval-fantastique Warcraft, introduit par Warcraft: Orcs and Humans en 1994. World of Warcraft prend place en Azeroth, près de quatre ans après les événements de la fin du jeu précédent, Warcraft III: The Frozen Throne (2003)1. Blizzard Entertainment annonce World of Warcraft le 2 septembre 20012. Le jeu est sorti en Amérique du Nord le 23 novembre 2004, pour les 10 ans de la franchise Warcraft.', '../img/games/wow_box.jpg'),
-(4, 'League of Legends', '2009-10-27', 'Riot Games', 'Riot Games\r\nTencent\r\nGarena', 'League of Legends (abrégé LoL) est un jeu vidéo sorti en 2009 de type arène de bataille en ligne, free-to-play, développé et édité par Riot Games sur Windows et Mac OS.\r\nLe mode principal du jeu voit s\'affronter deux équipes de 5 joueurs en temps réel dans des parties d\'une durée d\'environ une demi-heure, chaque équipe occupant et défendant sa propre base sur la carte. Chacun des dix joueurs contrôle un personnage à part entière parmi les plus de 150 qui sont proposés. Ces personnages, connus sous le nom de « champions » dans le jeu, disposent de compétences uniques et d\'un style de jeu qui leur est propre.', ''),
-(5, 'Cuphead', '2017-09-29', 'Studio MDHR', 'Studio MDHR', 'Cuphead est un jeu vidéo indépendant de type shoot \'em up. développé et publié par le Studio MDHR. Ce dernier est fondé par des frères canadiens, Chad et Jared Moldenhauer. Le jeu est inspiré par les œuvres de réalisateurs de dessins animés des années 1930 comme les studios de Max Fleischer et de Walt Disney Animation Studios.', '');
+(2, 'World of Warcraft', '2005-11-23', 'Blizzard Entertainment', 'Blizzard Entertainment', 'World of Warcraft (abrégé WoW) est un jeu vidéo de type MMORPG (jeu de rôle en ligne massivement multijoueur) développé par la société Blizzard Entertainment. C\'est le 4e jeu de l\'univers médiéval-fantastique Warcraft, introduit par Warcraft: Orcs and Humans en 1994. World of Warcraft prend place en Azeroth, près de quatre ans après les événements de la fin du jeu précédent, Warcraft III: The Frozen Throne (2003)1. Blizzard Entertainment annonce World of Warcraft le 2 septembre 20012. Le jeu est sorti en Amérique du Nord le 23 novembre 2004, pour les 10 ans de la franchise Warcraft.', 'assets/img/games/wow_box.jpg'),
+(4, 'League of Legends', '2009-10-27', 'Riot Games', 'Riot Games\r\nTencent\r\nGarena', 'League of Legends (abrégé LoL) est un jeu vidéo sorti en 2009 de type arène de bataille en ligne, free-to-play, développé et édité par Riot Games sur Windows et Mac OS.\r\nLe mode principal du jeu voit s\'affronter deux équipes de 5 joueurs en temps réel dans des parties d\'une durée d\'environ une demi-heure, chaque équipe occupant et défendant sa propre base sur la carte. Chacun des dix joueurs contrôle un personnage à part entière parmi les plus de 150 qui sont proposés. Ces personnages, connus sous le nom de « champions » dans le jeu, disposent de compétences uniques et d\'un style de jeu qui leur est propre.', 'assets/img/games/lol_box.jpg'),
+(5, 'Cuphead', '2017-09-29', 'Studio MDHR', 'Studio MDHR', 'Cuphead est un jeu vidéo indépendant de type shoot \'em up. développé et publié par le Studio MDHR. Ce dernier est fondé par des frères canadiens, Chad et Jared Moldenhauer. Le jeu est inspiré par les œuvres de réalisateurs de dessins animés des années 1930 comme les studios de Max Fleischer et de Walt Disney Animation Studios.', 'assets/img/games/cuphead_box.jpg');
 
 --
 -- Index pour les tables déchargées
